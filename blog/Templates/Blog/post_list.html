@@ -4,19 +4,12 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Fabi y yo vamos a realizar un gram trabjo juntos con la ayuuda de Dios. Para adelante siempre.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>ESto es un prueba de Django.</p>
-        </div>
+        <h1> <a href = "/"> Django chicas Blog </a>
+        </h1 >
+        </div >{% for post in posts %} 
+        <div><p> publicado: {{ post.published_date }} 
+        </p > <h1> <ahref = "" >{{ post.title }} </a> </h1><p>{{ post.text|linebreaksbr }} </p>
+        </div> {%endfor%}
+        
     </body>
 </html>
